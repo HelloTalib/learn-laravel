@@ -19,3 +19,4 @@ Route::get('/', function () {
 
 
 Route::get('/about', [App\Http\Controllers\AboutController::class, '__invoke']);
+Route::get('/blog', [App\Http\Controllers\BlogController::class, '__invoke']);
