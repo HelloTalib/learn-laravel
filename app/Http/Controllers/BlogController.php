@@ -11,7 +11,12 @@ class BlogController extends Controller {
      */
     public function __invoke(Request $request) {
 
+
+        // return  DB::table('blogs')->join('blogs_category', 'blogs.category_id', '=', 'blogs_category.id')
+        //     ->select('blogs_category.*')
+        //     ->get();
         $blog = DB::table('blogs')->get();
+
         return view('blog', compact('blog'));
     }
 }
